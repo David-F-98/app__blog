@@ -2,10 +2,14 @@ import React from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import PaginaDeInicio from './Components/PaginaDeInicio';
 import Blog from './Components/Blog';
+import Post from './Components/Post';
 import AcercaDe from './Components/AcercaDe';
 import Header from './Components/Header';
 import ContenedorPrincipal from './StylesElements/StylesApp/ContenedorPrincipal';
 import Main from './StylesElements/StylesApp/Main';
+
+
+
 // Para trabajar con Reac Route tener en cuenta:
 // Usar BrowserRouter, NavLink, Route, Routes
 //  1. Encerrar dentro de BrowserRouter toda la estructura
@@ -21,6 +25,7 @@ const App = () => {
           <Routes>
             <Route  path='/' element={<PaginaDeInicio/>}/>
             <Route path='/blog' element={<Blog/>}/>
+            <Route path='/post/:id' element={<Post/>}/>
             <Route path='/acerca-de' element={<AcercaDe/>}/>
           </Routes>
         </Main>
