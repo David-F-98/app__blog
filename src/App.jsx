@@ -4,6 +4,8 @@ import PaginaDeInicio from './Components/PaginaDeInicio';
 import Blog from './Components/Blog';
 import AcercaDe from './Components/AcercaDe';
 import Header from './Components/Header';
+import ContenedorPrincipal from './StylesElements/StylesApp/ContenedorPrincipal';
+import Main from './StylesElements/StylesApp/Main';
 // Para trabajar con Reac Route tener en cuenta:
 // Usar BrowserRouter, NavLink, Route, Routes
 //  1. Encerrar dentro de BrowserRouter toda la estructura
@@ -13,16 +15,16 @@ import Header from './Components/Header';
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
+      <ContenedorPrincipal>
         <Header/>
-        <main>
+        <Main>
           <Routes>
             <Route  path='/' element={<PaginaDeInicio/>}/>
             <Route path='/blog' element={<Blog/>}/>
             <Route path='/acerca-de' element={<AcercaDe/>}/>
           </Routes>
-        </main>
-      </div>
+        </Main>
+      </ContenedorPrincipal>
     </BrowserRouter>
   );
 }
