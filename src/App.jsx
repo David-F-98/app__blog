@@ -7,6 +7,7 @@ import AcercaDe from './Components/AcercaDe';
 import Header from './Components/Header';
 import ContenedorPrincipal from './StylesElements/StylesApp/ContenedorPrincipal';
 import Main from './StylesElements/StylesApp/Main';
+import Error404 from './Components/Error404';
 
 
 
@@ -23,9 +24,10 @@ const App = () => {
         <Header/>
         <Main>
           <Routes>
+            <Route path='*' element={<Error404/>}/>
             <Route  path='/' element={<PaginaDeInicio/>}/>
             <Route path='/blog' element={<Blog/>}/>
-            <Route path='/post/:id' element={<Post/>}/>
+            <Route path='/post/:id' element={<Post/>}/>           {/*Direccion dinamica*/}
             <Route path='/acerca-de' element={<AcercaDe/>}/>
           </Routes>
         </Main>
